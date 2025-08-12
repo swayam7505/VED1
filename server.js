@@ -66,6 +66,8 @@ function authMiddleware(req, res, next) {
     next();
   });
 }
+app.get("/", (req, res) => {
+  res.send("Welcome to the Report Uploader API!");});
 
 app.post("/admin-login", (req, res) => {
   const { username, password } = req.body;
